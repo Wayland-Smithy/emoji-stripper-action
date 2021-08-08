@@ -17,7 +17,7 @@ jobs:
   title_and_body:
     runs-on: ubuntu-20.04
     steps:
-    - uses: Wayland-Smithy/emoji-stripper-action@master
+    - uses: Wayland-Smithy/emoji-stripper-action@v2
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         title: true

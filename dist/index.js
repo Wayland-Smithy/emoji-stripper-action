@@ -6310,16 +6310,16 @@ async function doAsyncAction() {
 
     // with: title = true
     if (strip_title.toLowerCase() === 'true') {
-      update_options['title'] = stripTitle(pull_octo_res.data.title)
+      request_options['title'] = stripTitle(pull_octo_res.data.title)
     }
     // with: body = true
     if (strip_body.toLowerCase() === 'true') {
-      update_options['body'] = stripBody(pull_octo_res.data.body, core.getInput('body-after'), core.getInput('body-before'));
+      request_options['body'] = stripBody(pull_octo_res.data.body, core.getInput('body-after'), core.getInput('body-before'));
     }
 
     // only update if there is something to change
-    if (update_options.title || update_options.body) {
-      await octokit.rest.pulls.update(update_options);
+    if (request_options.title || request_options.body) {
+      await octokit.rest.pulls.update(request_options);
     }
   } catch (error) {
     core.setFailed('Action failed. Error: ' + error.message);
