@@ -1,0 +1,8 @@
+name: 'Pull Request Emoji Stripper'
+description: 'Removes emoji from PR titles.'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
