@@ -1,5 +1,5 @@
 # Emoji Stripper Action
-A GitHub action for removing emoji from PR titles.
+A GitHub action for removing emoji from PR titles with regex replace.
 
 ## Usage
 
@@ -22,4 +22,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-_Note: This grants access to the `GITHUB_TOKEN` so the action can make calls to GitHub's rest API to fetch and edit PR data_
+_Note: This grants access to the `GITHUB_TOKEN` so the action can make calls to GitHub's rest API to fetch and edit PR data._
