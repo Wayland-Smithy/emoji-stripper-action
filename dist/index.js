@@ -6310,7 +6310,7 @@ async function doAsyncAction() {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         pull_number: pr_number,
-        title: (stripped_title === '') ? "(blank emojiless)" : stripped_title  // just incase some joker puts only emoji, PR titles can not blank
+        title: (stripped_title.trim() === '') ? "(only emoji)" : stripped_title  // just incase some joker puts only emoji, PR titles can not blank
       });
     }
   } catch (error) {
