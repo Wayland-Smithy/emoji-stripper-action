@@ -10,7 +10,7 @@ This will strip emoji from new PR titles and any text _after_ the Changelog head
 ```
 name: "PR Emoji Stripper"
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited]
 
 jobs:
