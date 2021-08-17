@@ -6285,7 +6285,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(245);
 const github = __nccwpck_require__(413);
-const emoji_pattern = /([\uD800-\uDBFF][\uDC00-\uDFFF]|[\u2000-\u3300]|[\u00A9-\u00AE]|[\uFE0F])/g;
+const emoji_pattern = /([\uD800-\uDBFF][\uDC00-\uDFFF]|[\u2000-\u3300]|[\u00A9-\u00AE]|[\uFE0F])\s?/g;
 
 async function doAsyncAction() {
   try {
@@ -6310,7 +6310,7 @@ async function doAsyncAction() {
 
     // with: title = true
     if (strip_title.toLowerCase() === 'true') {
-      request_options['title'] = stripTitle(pull_octo_res.data.title)
+      request_options['title'] = stripTitle(pull_octo_res.data.title);
     }
     // with: body = true
     if (strip_body.toLowerCase() === 'true') {
