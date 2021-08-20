@@ -28,7 +28,7 @@ async function doAsyncAction() {
       request_options['title'] = stripTitle(pull_octo_res.data.title);
     }
     // with: body = true
-    if (strip_body.toLowerCase() === 'true') {
+    if (strip_body.toLowerCase() === 'true' && pull_octo_res.data.body) {
       request_options['body'] = stripBody(pull_octo_res.data.body, core.getInput('body-after'), core.getInput('body-before'));
     }
 
