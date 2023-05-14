@@ -13,5 +13,5 @@ inputs:
   body-before:
     ddescription: 'If provided will only apply to emoji found before this'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
