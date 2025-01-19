@@ -3,7 +3,7 @@ A GitHub action for removing emoji from PR content with regex replace.
 
 ## Usage
 
-Create a workflow (eg: `.github/workflows/emoji_strip.yml` see [Creating a Workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file))
+Create a workflow (eg: `.github/workflows/emoji_strip.yml` see [Creating a Workflow file](https://docs.github.com/en/actions/use-cases-and-examples/creating-an-example-workflow#creating-an-example-workflow))
 
 ### Example workflow
 This will strip emoji from new PR titles and any text _after_ the Changelog heading only, for any branch, when created or edited.
